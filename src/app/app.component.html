@@ -1,0 +1,15 @@
+<p>Player 1</p>
+Baris1 <input [(ngModel)] ="Baris1" type="text" /> Kolom1 <input [(ngModel)]="Kolom1" type ="text"/>{{papan[Baris1][Kolom1]="O"}}
+<p>Player 2</p>
+
+Baris2 <input [(ngModel)] ="Baris2" type="text" /> Kolom2 <input [(ngModel)]="Kolom2" type ="text"/>
+{{papan[Baris2][Kolom2]="X"}}
+<div *ngFor="let i of papan">
+	<span *ngFor="let j of i">
+        {{j}}
+    </span>
+
+</div>
+<br/>
+<button (click)="input()">input</button>
+<button (click)="refresh()">Refresh</button>
